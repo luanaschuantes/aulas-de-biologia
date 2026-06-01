@@ -2,33 +2,92 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMentoria</title>
     <link rel="stylesheet" href="estilo.css">
-    <title>BioMentoria - Home</title>
 </head>
 <body>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="cadastro.html">Matricule-se</a>
-        <a href="planos.html">Planos</a>
-        <a href="alunos.html">Alunos</a>
-        <a href="aulas.html">Aulas Grátis</a>
+        <a href="#">Home</a>
+        <a href="#cadastro">Cadastro</a>
+        <a href="#alunos">Alunos</a>
+        <a href="#avaliacoes">Avaliações</a>
     </nav>
 
-    <header class="banner">
-        <h1>Mentoria de Biologia</h1>
-        <p>Entenda a vida com a Profª. Luana Schuantes</p>
+    <header>
+        <h1>BioMentoria</h1>
+        <p>Mentoria de Biologia - Profª Luana Schuantes</p>
     </header>
 
     <div class="container">
+
         <div class="card">
-            <h2>Bem-vindo à sua jornada científica</h2>
-            <p>Prepare-se para o ENEM, vestibulares e concursos com uma metodologia focada em entendimento real, não apenas memorização.</p>
-            <button onclick="location.href='cadastro.html'">Começar Agora</button>
+            <h2>Sobre a Mentoria</h2>
+            <p>
+                Plataforma voltada para estudantes que desejam
+                melhorar seu desempenho em Biologia para ENEM,
+                vestibulares e concursos.
+            </p>
         </div>
+
+        <div class="card" id="cadastro">
+            <h2>Cadastro de Aluno</h2>
+
+            <input type="text" id="nome" placeholder="Nome">
+
+            <input type="email" id="email" placeholder="E-mail">
+
+            <button onclick="cadastrarAluno()">
+                Cadastrar
+            </button>
+        </div>
+
+        <div class="card" id="alunos">
+            <h2>Alunos Matriculados</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaAlunos"></tbody>
+            </table>
+        </div>
+
+        <div class="card" id="avaliacoes">
+            <h2>Avaliações dos Alunos</h2>
+
+            <div class="avaliacao">
+                ⭐⭐⭐⭐⭐
+                <p>Excelente didática. Aprendi muito!</p>
+                <strong>Maria Oliveira</strong>
+            </div>
+
+            <div class="avaliacao">
+                ⭐⭐⭐⭐⭐
+                <p>Aulas objetivas e fáceis de entender.</p>
+                <strong>João Pereira</strong>
+            </div>
+
+            <div class="avaliacao">
+                ⭐⭐⭐⭐⭐
+                <p>Consegui aumentar minha nota no ENEM.</p>
+                <strong>Ana Costa</strong>
+            </div>
+
+        </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Mentoria de Biologia - Profª. Luana Schuantes</p>
+        © 2026 BioMentoria - Profª Luana Schuantes
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
